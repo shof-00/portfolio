@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shofikul Islam - Academic Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 2px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background: white;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .home-section {
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #1e3c72;
+            margin: 20px 0;
+            object-fit: cover;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        h1 {
+            color: #1e3c72;
+            font-size: 36px;
+            margin: 20px 0 10px 0;
+        }
+        
+        .subtitle {
+            color: #2a5298;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .institution-info {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2a5298;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .education-item, .publication-item, .experience-item {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2a5298;
+            border-radius: 4px;
+        }
+        
+        .degree-title {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 16px;
+        }
+        
+        .university-name {
+            color: #2a5298;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+        
+        .cgpa-badge {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .research-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 4px solid #2a5298;
+        }
+        
+        .skill-category h3 {
+            margin-top: 0;
+            color: #1e3c72;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 8px 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border-left: 3px solid #2a5298;
+        }
+        
+        .cert-item {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .cert-title {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 16px;
+        }
+        
+        .cert-details {
+            color: #555;
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        
+        .leadership-item {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #2a5298;
+            border-radius: 4px;
+        }
+        
+        .org-name {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 16px;
+        }
+        
+        .position-title {
+            color: #2a5298;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+        
+        .duration {
+            color: #888;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .contact-section {
+            text-align: center;
+        }
+        
+        .contact-item {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        
+        .contact-item a {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin: 20px 0;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        
+        .empty-message {
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">SI Portfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="container">
+            <img src="shofikul.jpeg" alt="Shofikul Islam" class="profile-img">
+            <h1>Shofikul Islam</h1>
+            <p class="subtitle">Pharmacy Student | Researcher | Healthcare Professional</p>
+            <div class="institution-info">
+                <p><strong>University of Rajshahi</strong></p>
+                <p>Bachelor of Pharmacy (Hons) - 2nd Year</p>
+                <p>Academic Session: 2024-25</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am Shofikul Islam, a Pharmacy student at the University of Rajshahi, from the 2024–25 academic session. I am interested in pharmaceutical sciences, healthcare, medicine, research, and continuous learning. I aim to develop my academic knowledge, practical skills, communication abilities, and professional competencies to contribute meaningfully to the healthcare sector.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="degree-title">Bachelor of Pharmacy (Hons)</div>
+                <div class="university-name">University of Rajshahi</div>
+                <div class="duration">2nd Year | Academic Session: 2024-25</div>
+                <div class="cgpa-badge">CGPA: 3.912</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="container">
+            <h2>Research</h2>
+            
+            <h3>Research Interests</h3>
+            <div class="research-item">Clinical Pharmacology</div>
+            <div class="research-item">Drug Discovery</div>
+            
+            <h3>Publications & Projects</h3>
+            <p class="empty-message">Research projects currently in progress</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Research Skills</h3>
+                    <div class="skill-item">Zotero</div>
+                    <div class="skill-item">Mendeley Reference Manager</div>
+                    <div class="skill-item">SciSpace</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Software Skills</h3>
+                    <div class="skill-item">Microsoft Word</div>
+                    <div class="skill-item">Microsoft Excel</div>
+                    <div class="skill-item">Microsoft PowerPoint</div>
+                    <div class="skill-item">SPSS</div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming Skills</h3>
+                    <div class="skill-item">R Programming</div>
+                    <div class="skill-item">C Programming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="training">
+        <div class="container">
+            <h2>Training & Certifications</h2>
+            
+            <div class="cert-item">
+                <div class="cert-title">10 Days Hands-On IBM SPSS</div>
+                <div class="cert-details"><strong>Organizer:</strong> Rajshahi University Education Club</div>
+                <div class="cert-details"><strong>Year:</strong> 2026</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership">
+        <div class="container">
+            <h2>Leadership & Activities</h2>
+            
+            <div class="leadership-item">
+                <div class="org-name">Rajshahi University Higher Education and Research Forum</div>
+                <div class="position-title">Position: Member</div>
+                <div class="duration">Duration: June 2026 - Present</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-section">
+                <div class="contact-item">
+                    <strong>Email:</strong> <a href="mailto:shof28387@gmail.com">shof28387@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Shofikul Islam. All rights reserved. | Academic Portfolio</p>
+    </footer>
+</body>
+</html>
